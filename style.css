@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Text Styles
+   ========================================================================== */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	font-style: oblique;
+	font-family: 'Gill Sans', sans-serif;
+  	overflow-x: hidden;
+}
+
+p {
+	color: #303197;
+	margin: auto;
+	padding: 0;
+	min-height: 100%;
+	font-style: oblique;
+	font-family: 'Gill Sans', sans-serif;
+	text-align: center;
+	inline-size: 40vw;
+  	overflow-x: hidden;
+}
+
+h2 { /*main headers in blue*/
+	font-weight: 5000;
+	font-size: 8em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+  	letter-spacing: .005em;
+	text-align: center;
+	margin: 6vh;
+	padding: 0;
+	color: #303197;
+}
+
+h3 {  /*smaller headers in blue*/
+	font-weight: 5000;
+	font-size: 4em;
+	line-height: auto;
+	text-transform: uppercase;
+  	letter-spacing: auto;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #303197;
+}
+
+h4 { /*main headers in white*/
+	font-weight: 5000;
+	font-size: 8em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+  	letter-spacing: .005em;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #f8f8f7;
+}
+
+h5 {  /*smaller headers in white*/
+	font-weight: 5000;
+	font-size: 4em;
+	line-height: auto;
+	text-transform: uppercase;
+  	letter-spacing: auto;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #f8f8f7;
+}
+
+
+.inner {
+	text-align: center;
+}
+
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.section {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: auto;
+  	padding: 20% 0;
+}
+#section-one {
+	background: #f8f8f7;
+}
+#section-two {
+	background: #f8f8f7;
+}
+#section-three {
+	background: #f8f8f7;
+}
+#section-four {
+	background: #f8f8f7;
+}
+#section-five {
+	background: linear-gradient(to bottom, #f8f8f7, #303197);
+
+}
+#section-six {
+	background: #303197;
+}
+
+
+/* ==========================================================================
+   Section Navigation
+   ========================================================================== */
+
+#section-menu {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	z-index: 3000;
+	text-transform: uppercase;
+
+	-webkit-transition: all ease 0.1s;
+	transition: all ease 0.1s;
+}
+#section-menu.freeze {
+	right: -112px;
+}
+.touch #section-menu {
+	display: none;
+}
+#section-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#section-menu li {}
+
+#section-menu a {
+	float: right;
+	clear: both;
+
+	display: block;
+	border: #303197 solid 3px;
+	height: 2em;
+	line-height: 2em;
+	text-decoration: none;
+	padding: 0 16px;
+	background: #303197;
+	color: #f8f8f7;
+	white-space: nowrap;
+
+	-webkit-transition: all ease 0.1s;
+	transition: all ease 0.1s;
+}
+#section-menu.freeze a {
+	float: none;
+	width: 128px;
+}
+#section-menu a:hover,
+#section-menu a:focus { /*hover select on headers*/
+	/* background: green;*/
+	font-size: 1.2em;
+}
+#section-menu a span {/*open headers*/
+	display: none;
+	font-weight: 700;
+	position: relative;
+	width: 48px;
+	left: -16px;
+	text-align: center;
+	color:#f8f8f7;
+	/*background: #303197;*/
+}
+#section-menu a.active { /*chosen header title text*/
+	background: #f8f8f7;	
+	color:#303197;
+	font-size: 1.4em;
+	font-weight: 700;
+}
+#section-menu.freeze a span {
+	display: inline-block;
+}
+#section-menu a.active span { /*numbers of selected while menu closed*/
+	display: inline-block;
+	color: #303197;
+	background: #f8f8f7;
+}
+#section-menu a.active span:before {/*numbers when menu open*/
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+#section-menu.freeze a.active span:before {
+	display: none;
+}
